@@ -9,11 +9,15 @@ Check here https://www.mozilla.org/en-US/firefox/all/
 wget "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" -O firefox.tar.bz2
 
 sudo tar -jxvf  firefox.tar.bz2 -C /opt/
+
 sudo mv /opt/firefox*/ /opt/firefox
+
 sudo ln -sf /opt/firefox/firefox /usr/bin/firefox
 
 echo -e '[Desktop Entry]\n Version=59.0.3\n Encoding=UTF-8\n Name=Mozilla Firefox\n Comment=Navegador Web\n Exec=/opt/firefox/firefox\n Icon=/opt/firefox/browser/chrome/icons/default/default128.png\n Type=Application\n Categories=Network' | sudo tee /usr/share/applications/firefox.desktop
+
 sudo chmod +x /usr/share/applications/firefox.desktop
+
 cp /usr/share/applications/firefox.desktop ~/Desktop
 
 
