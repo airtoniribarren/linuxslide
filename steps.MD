@@ -25,4 +25,4 @@ journalctl --vacuum-size=1M
 apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xterm libxcursor1 x11-utils libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils
 
 ## Desktop
-apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0
+apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0 sudo stterm
