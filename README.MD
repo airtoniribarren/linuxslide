@@ -43,7 +43,7 @@ mv tty6.conf tty6.conf.bkp
 sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xfonts-base x11-utils libxcursor1 libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils alsa-utils pulseaudio
 
 ## Desktop
-sudo apt-get install --no-install-recommends plymouth openbox compton tint2 feh scrot xterm stterm pcmanfm file-roller geany wicd volumeicon-alse
+sudo apt-get install --no-install-recommends plymouth openbox compton tint2 feh scrot xterm stterm pcmanfm file-roller geany wicd volumeicon-alsa
 
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
