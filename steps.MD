@@ -28,5 +28,5 @@ apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xs
 apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0 stterm
 
 ## sudo
-apt-get install --no-install-recommends sudo 
+apt-get install --no-install-recommends sudo \
 usermod -a -G sudo slide
