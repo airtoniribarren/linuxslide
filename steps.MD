@@ -30,13 +30,13 @@ apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0 stter
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
 
-#Set resolution
-xrandr --size 1366x768 &
+#Set resolution \
+xrandr --size 1024x768 &
 
-#Set the wallpaper
+#Set the wallpaper \
 
 
-#start tint2
+#start tint2 \
 tint2 &
 
 ## sudo
