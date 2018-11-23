@@ -1,8 +1,12 @@
-# download installer
-Get here:
-https://github.com/saymoncoppi/linuxslide/blob/master/Debian%20Tiny%20Installer.MD
+# SLIDE
+## Debian Tiny Installer
 
-## sudo
+You can download a couple of image files of small size, suitable for USB Sticks and similar devices, write them to the media, and then start the installation by booting from that.
+
+Here are the links to the available image files (look at the MANIFEST file for information): 
+amd64 - http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/
+
+## Install SUDO
 apt-get install --no-install-recommends sudo \
 usermod -a -G sudo slide
 
@@ -22,7 +26,7 @@ GRUB_RECORDFAIL_TIMEOUT=0 \
 GRUB_TIMEOUT=0 \
 GRUB_TIMEOUT_STYLE=hidden \
 
-## update grub settings
+## update GRUB settings
 sudo update-grub
 
 # install Desktop
