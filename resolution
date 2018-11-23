@@ -10,3 +10,5 @@ cat > ~/.xprofile << _EOF
 xrandr --newmode $MODELINE
 xrandr --addmode $DISP $MODERES
 _EOF
+
+https://unix.stackexchange.com/questions/227876/how-to-set-custom-resolution-using-xrandr-when-the-resolution-is-not-available-i
