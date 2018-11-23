@@ -19,7 +19,7 @@ sudo edit /etc/default/grub
 GRUB_CMDLINE_LINUX_DEFAULT="splash quiet" \
 GRUB_DEFAULT=0 \
 GRUB_DISABLE_OS_PROBER=true \
-GRUB_DISTRIBUTOR="`/usr/bin/lsb_release -d -s 2>/dev/null || echo slide`" \
+GRUB_DISTRIBUTOR="`/usr/bin/lsb_release -d -s 2>/dev/null || echo Slide`" \
 GRUB_GFXMODE="1024x768" \
 GRUB_GFXPAYLOAD_LINUX=keep \
 GRUB_HIDDEN_TIMEOUT=0 \
