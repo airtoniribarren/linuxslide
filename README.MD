@@ -49,7 +49,7 @@ sudo apt-get install --no-install-recommends plymouth openbox compton tint2 feh 
 edit the file ~/.config/openbox/autostart \
 
 #Set resolution \
-xrandr --size 1024x768 &
+xrandr -s 1024x768 &
 
 #Set the wallpaper \
 
