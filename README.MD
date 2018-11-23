@@ -47,6 +47,10 @@ sudo apt-get install --no-install-recommends network-manager net-tools wireless-
 ## Wifi firmwares
 sudo apt-get install --no-install-recommends firmware-linux-free firmware-linux-nonfree firmware-atheros firmware-iwlwifi firmware-zd1211 firmware-realtek firmware-bnx2 firmware-brcm80211 firmware-cavium firmware-ipw2x00 firmware-libertas firmware-ti-connectivity
 
+## www / firewall
+sudo apt-get install --no-install-recommends iptables lighttpd \
+check for settings later
+
 ## Desktop
 sudo apt-get install --no-install-recommends openbox compton tint2 feh scrot xterm 
 
