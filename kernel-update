@@ -1,3 +1,8 @@
+https://willhaley.com/blog/custom-debian-live-environment/
+
+
+
+
 http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.15/
 wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15/linux-headers-4.*_all.deb
 
