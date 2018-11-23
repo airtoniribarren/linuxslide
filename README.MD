@@ -41,21 +41,8 @@ mv tty6.conf tty6.conf.bkp
 ## Xorg
 sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xfonts-base x11-utils libxcursor1 libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils alsa-utils pulseaudio
 
-## Network
-sudo apt-get install --no-install-recommends network-manager net-tools wireless-tools wpagui curl openssh-client
-
-## Wifi firmwares
-sudo apt-get install --no-install-recommends firmware-linux-free firmware-linux-nonfree firmware-atheros firmware-iwlwifi firmware-zd1211 firmware-realtek firmware-bnx2 firmware-brcm80211 firmware-cavium firmware-ipw2x00 firmware-libertas firmware-ti-connectivity
-
-## www / firewall
-sudo apt-get install --no-install-recommends iptables lighttpd \
-check for settings later
-
 ## Desktop
-sudo apt-get install --no-install-recommends openbox compton tint2 feh scrot xterm 
-
-## Desktop addons
-sudo apt-get install --no-install-recommends stterm pcmanfm file-roller geany wicd volumeicon-alse
+sudo apt-get install --no-install-recommends plymouth openbox compton tint2 feh scrot xterm stterm pcmanfm file-roller geany wicd volumeicon-alse
 
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
@@ -80,6 +67,19 @@ sudo tar -jxvf  firefox.tar.bz2 -C /opt/ \
 sudo ln -sf /opt/firefox/firefox /usr/bin/firefox \
 
 echo -e '[Desktop Entry]\n Version=59.0.3\n Encoding=UTF-8\n Name=Mozilla Firefox\n Comment=Navegador Web\n Exec=/opt/firefox/firefox\n Icon=/opt/firefox/browser/chrome/icons/default/default128.png\n Type=Application\n Categories=Network' | sudo tee /usr/share/applications/firefox.desktop
+
+
+
+## Network
+sudo apt-get install --no-install-recommends network-manager net-tools wireless-tools wpagui curl openssh-client
+
+## Wifi firmwares
+sudo apt-get install --no-install-recommends firmware-linux-free firmware-linux-nonfree firmware-atheros firmware-iwlwifi firmware-zd1211 firmware-realtek firmware-bnx2 firmware-brcm80211 firmware-cavium firmware-ipw2x00 firmware-libertas firmware-ti-connectivity
+
+## www / firewall
+sudo apt-get install --no-install-recommends iptables lighttpd \
+check for settings later
+
 
 
 # remove unrequired files, logs and apt list
