@@ -12,7 +12,6 @@ amd64 - http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/curre
 apt-get install --no-install-recommends sudo \
 usermod -a -G sudo slide
 
-
 # GRUB fast boot
 sudo edit /etc/default/grub
 
@@ -42,8 +41,17 @@ mv tty6.conf tty6.conf.bkp
 ## Xorg
 sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xfonts-base x11-utils libxcursor1 libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils alsa-utils pulseaudio
 
+## Network
+sudo apt-get install --no-install-recommends network-manager net-tools wireless-tools wpagui curl openssh-client
+
+## Wifi firmwares
+sudo apt-get install --no-install-recommends firmware-linux-free firmware-linux-nonfree firmware-atheros firmware-iwlwifi firmware-zd1211 firmware-realtek firmware-bnx2 firmware-brcm80211 firmware-cavium firmware-ipw2x00 firmware-libertas firmware-ti-connectivity
+
 ## Desktop
-sudo apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0 libdbus-glib-1-2 xterm stterm pcmanfm file-roller
+sudo apt-get install --no-install-recommends openbox compton tint2 feh scrot xterm 
+
+## Desktop addons
+sudo apt-get install --no-install-recommends stterm pcmanfm file-roller geany wicd volumeicon-alse
 
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
