@@ -1,4 +1,4 @@
-# slide
+# Slide
 A mini Debian flavor with a Simple, Light and Incredible Desktop Enviroment
 
 ## Get Debian Tiny Installer
@@ -37,6 +37,16 @@ replace ACTIVE_CONSOLES = "/dev/tty[1-6]" to ACTIVE_CONSOLES = "/dev/tty[1-3]" \
 mv tty4.conf tty4.conf.bkp \
 mv tty5.conf tty5.conf.bkp \
 mv tty6.conf tty6.conf.bkp 
+
+# edit /etc/issue and /etc/motd
+replace withe the content (later)
+
+# edit /etc/lsb-release
+replace the content: \
+DISTRIB_ID=Slide \
+DISTRIB_RELEASE="0.1" \
+DISTRIB_DESCRIPTION="Slide 0.1 " \
+DISTRIB_CODENAME=unstable
 
 # install Desktop
 ## Xorg
