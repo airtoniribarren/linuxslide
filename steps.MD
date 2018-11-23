@@ -14,7 +14,7 @@ usermod -a -G sudo slide
 # GRUB fast boot
 sudo edit /etc/default/grub
 
-#slide fastboot
+#slide fastboot \
 GRUB_CMDLINE_LINUX_DEFAULT="splash quiet" \
 GRUB_DEFAULT=0 \
 GRUB_DISABLE_OS_PROBER=true \
@@ -47,7 +47,18 @@ xrandr --size 1024x768 &
 #start tint2 \
 tint2 &
 
+# Install latest Firefox
+Check here https://www.mozilla.org/en-US/firefox/all/ \
+Install dependencies: \
+sudo apt-get install --no-install-recommends libgtk-3-0 libdbus-glib-1-2
 
+wget "https://download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US" -O firefox.tar.bz2 \
+
+sudo tar -jxvf  firefox.tar.bz2 -C /opt/ \
+
+sudo ln -sf /opt/firefox/firefox /usr/bin/firefox \
+
+echo -e '[Desktop Entry]\n Version=59.0.3\n Encoding=UTF-8\n Name=Mozilla Firefox\n Comment=Navegador Web\n Exec=/opt/firefox/firefox\n Icon=/opt/firefox/browser/chrome/icons/default/default128.png\n Type=Application\n Categories=Network' | sudo tee /usr/share/applications/firefox.desktop
 
 
 # remove unrequired files, logs and apt list
