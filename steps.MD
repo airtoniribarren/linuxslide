@@ -29,6 +29,13 @@ GRUB_TIMEOUT_STYLE=hidden
 ## update GRUB settings
 sudo update-grub
 
+# reduce TTY number and increase performance
+sudo nano /etc/default/console-setup \
+replace ACTIVE_CONSOLES = "/dev/tty[1-6]" to ACTIVE_CONSOLES = "/dev/tty[1-3]" \
+mv tty4.conf tty4.conf.bkp \
+mv tty5.conf tty5.conf.bkp \
+mv tty6.conf tty6.conf.bkp 
+
 # install Desktop
 ## Xorg
 sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xterm libxcursor1 x11-utils libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils
