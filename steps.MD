@@ -1,6 +1,7 @@
-# A mini Debian flavor with a Simple, Light and Incredible Desktop Enviroment
+# slide
+A mini Debian flavor with a Simple, Light and Incredible Desktop Enviroment
 
-## Debian Tiny Installer
+## Get Debian Tiny Installer
 
 You can download a couple of image files of small size, suitable for USB Sticks and similar devices, write them to the media, and then start the installation by booting from that.
 
