@@ -23,3 +23,9 @@ cp /usr/share/applications/firefox.desktop ~/Desktop
 
 ## Source
 https://www.edivaldobrito.com.br/firefox-no-linux-manualmente/
+
+## Knowed bugs
+libgtk-3-0
+libcairo-gobject2
+libatk-adaptor
+
