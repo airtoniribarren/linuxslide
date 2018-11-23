@@ -25,7 +25,8 @@ cp /usr/share/applications/firefox.desktop ~/Desktop
 https://www.edivaldobrito.com.br/firefox-no-linux-manualmente/
 
 ## Knowed bugs
+apt-get download "pkg.deb" ; dpkg -x "pkg.deb" /tmp/"pkg" ; cd /tmp/"pkg" ; cp -aR * / ; rm -rf /"pkg.deb"
+
 libgtk-3-0
-libcairo-gobject2
-libatk-adaptor
+libdbus-glib-1-2
 
