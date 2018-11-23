@@ -27,6 +27,18 @@ apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xs
 ## Desktop
 apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0 stterm
 
+## openbox autostart
+edit the file ~/.config/openbox/autostart \
+
+#Set resolution
+xrandr --size 1366x768 &
+
+#Set the wallpaper
+
+
+#start tint2
+tint2 &
+
 ## sudo
 apt-get install --no-install-recommends sudo \
 usermod -a -G sudo slide
