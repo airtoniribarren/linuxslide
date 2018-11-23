@@ -1,0 +1,35 @@
+http://kernel.ubuntu.com/~kernel-ppa/mainline/v4.15/
+wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15/linux-headers-4.*_all.deb
+
+wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15/linux-headers-4.15.0-041500-generic_4*_amd64.deb
+
+wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15/linux-image-4.15.0-041500-generic_4*_amd64.deb
+
+sudo dpkg -i linux-headers-4.15*.deb linux-image-4.15*.deb
+
+systemctl reboot
+
+#check the current kernel version:
+$ uname -r
+
+#check the list of preview installed:
+$ dpkg --list | grep linux-image
+
+#remove the old entry:
+$ sudo apt-get purge linux-image-x.x.x-x
+
+#update the bootloader:
+$ sudo update-grub2
+
+
+# or
+
+
+# instal newest kernel
+#wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.2/linux-headers-4.15.2-041502_4.15.2-041502.201802072230_all.deb
+
+#wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.2/linux-headers-4.15.2-041502-generic_4.15.2-041502.201802072230_amd64.deb
+
+#wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.2/linux-image-4.15.2-041502-generic_4.15.2-041502.201802072230_amd64.deb
+
+#sudo dpkg -i linux-headers-4.15.2*.deb linux-image-4.15.2*.deb
