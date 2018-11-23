@@ -2,12 +2,16 @@
 Get here:
 https://github.com/saymoncoppi/linuxslide/blob/master/Debian%20Tiny%20Installer.MD
 
+## sudo
+apt-get install --no-install-recommends sudo \
+usermod -a -G sudo slide
+
 # install Desktop
 ## Xorg
-apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xterm libxcursor1 x11-utils libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils
+sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xterm libxcursor1 x11-utils libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils
 
 ## Desktop
-apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0 libdbus-glib-1-2 stterm
+sudo apt-get install --no-install-recommends openbox tint2 feh scrot libgtk-3-0 libdbus-glib-1-2 stterm
 
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
@@ -17,13 +21,9 @@ xrandr --size 1024x768 &
 
 #Set the wallpaper \
 
-
 #start tint2 \
 tint2 &
 
-## sudo
-apt-get install --no-install-recommends sudo \
-usermod -a -G sudo slide
 
 
 
