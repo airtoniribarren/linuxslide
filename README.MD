@@ -53,7 +53,7 @@ DISTRIB_CODENAME=unstable
 sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xfonts-base x11-utils libxcursor1 libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils alsa-utils pulseaudio
 
 ## Desktop
-sudo apt-get install --no-install-recommends plymouth openbox compton tint2 feh scrot xterm stterm pcmanfm file-roller geany wicd volumeicon-alsa
+sudo apt-get install --no-install-recommends openbox compton tint2 feh scrot xterm 
 
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
@@ -65,6 +65,10 @@ xrandr --size 1024x768 &
 
 #start tint2 \
 tint2 &
+
+
+## Desktop base tools
+sudo apt-get install --no-install-recommends stterm pcmanfm file-roller geany wicd volumeicon-alsa
 
 # Install latest Firefox
 Check here https://www.mozilla.org/en-US/firefox/all/ \
@@ -81,6 +85,9 @@ echo -e '[Desktop Entry]\n Version=59.0.3\n Encoding=UTF-8\n Name=Mozilla Firefo
 
 
 
+
+
+
 ## Network
 sudo apt-get install --no-install-recommends network-manager net-tools wireless-tools wpagui curl openssh-client
 
@@ -90,6 +97,10 @@ sudo apt-get install --no-install-recommends firmware-linux-free firmware-linux-
 ## www / firewall
 sudo apt-get install --no-install-recommends iptables lighttpd \
 check for settings later
+
+
+
+
 
 
 
