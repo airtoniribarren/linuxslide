@@ -12,3 +12,4 @@ xrandr --addmode $DISP $MODERES
 _EOF
 
 https://unix.stackexchange.com/questions/227876/how-to-set-custom-resolution-using-xrandr-when-the-resolution-is-not-available-i
+https://www.linuxquestions.org/questions/linux-software-2/how-to-determine-xrandr-output-name-from-sysfs-output-name-4175614199/
