@@ -33,7 +33,8 @@ sudo update-grub
 
 # reduce TTY number and increase performance
 sudo nano /etc/default/console-setup \
-replace ACTIVE_CONSOLES = "/dev/tty[1-6]" to ACTIVE_CONSOLES = "/dev/tty[1-3]" \
+replace ACTIVE_CONSOLES = "/dev/tty[1-6]" to ACTIVE_CONSOLES = "/dev/tty[1-2]" \
+mv tty3.conf tty3.conf.bkp \
 mv tty4.conf tty4.conf.bkp \
 mv tty5.conf tty5.conf.bkp \
 mv tty6.conf tty6.conf.bkp 
@@ -53,7 +54,7 @@ DISTRIB_CODENAME=unstable
 sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xfonts-base x11-utils libxcursor1 libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils alsa-utils pulseaudio
 
 ## Desktop
-sudo apt-get install --no-install-recommends openbox compton tint2 feh scrot xterm 
+sudo apt-get install --no-install-recommends openbox compton tint2 feh scrot xterm libnotify4
 
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
