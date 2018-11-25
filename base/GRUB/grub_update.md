@@ -18,3 +18,6 @@ GRUB_TIMEOUT_STYLE=hidden
 
 ## update GRUB settings
 sudo update-grub
+
+
+wget --no-check-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/base/GRUB/grub_update.sh
