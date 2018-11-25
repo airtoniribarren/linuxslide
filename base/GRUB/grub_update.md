@@ -1,6 +1,7 @@
-# GRUB fastboot settings
+# Boot speed
 
-## sudo edit /etc/default/grub
+## GRUB Settings
+sudo edit /etc/default/grub
 
 #linuxslide fastboot settings \
 GRUB_CMDLINE_LINUX_DEFAULT="splash quiet" \
