@@ -1,2 +1,11 @@
+Configurar fontes via cli
 https://linuxpanda.wordpress.com/2016/12/31/things-to-do-after-installing-debian-stretch/
 https://wiki.debian.org/Fonts
+
+JS para listar as fontes
+https://github.com/nodebox/opentype.js
+https://github.com/ynakajima/ttf.js/
+
+referencias:
+http://www.microsoft.com/typography/SpecificationsOverview.mspx
+https://developer.apple.com/fonts/TTRefMan/
