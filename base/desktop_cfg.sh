@@ -18,9 +18,11 @@ cd /usr/share/wallpapers/slide
 wget --no-check-certificate https://github.com/saymoncoppi/linuxslide/raw/master/custom/wallpapers/wallpapers.zip
 unzip wallpapers.zip
 rm -rf wallpapers.zip
+clear
 
 # make folder .config/openbox
 mkdir -p ~/.config/openbox/
+clear
 
 echo"#Set resolution 
 xrandr --size 1366x768 &
@@ -33,14 +35,8 @@ xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
 feh --bg-scale /usr/share/wallpapers/slide/Road.png
 
 #start tint2 
-tint2 &
+tint2 &" > ~/.config/openbox/autostart
 
-
-
-" > ~/.config/openbox/autostart
-  
-  
-  
   else
 		# Message  
 		echo -e "Please run this script as root..."
