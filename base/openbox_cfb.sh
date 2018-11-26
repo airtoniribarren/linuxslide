@@ -17,7 +17,13 @@ xrandr --size 1024x768 &
 #Set the wallpaper \
 
 #start tint2 
-tint2 &" > ~/.config/openbox/autostart
+tint2 &
+
+# set background color and big wait mouse cursor
+xsetroot -solid '#111111'
+xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
+
+" > ~/.config/openbox/autostart
   
   
   
