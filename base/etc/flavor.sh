@@ -2,7 +2,7 @@
 echo "Linux Slide 0.1 \n \l" > /etc/issue
 
 # edit /etc/motd
-echo "" | tee /etc/issue
+echo "" > /etc/motd
 
 # edit /etc/lsb-release
 echo 'DISTRIB_ID=Slide
