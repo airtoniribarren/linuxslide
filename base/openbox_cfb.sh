@@ -6,6 +6,9 @@ ROOT_UID=0
 function has_command() {
     command -v $1 > /dev/null
 }
+# dowload the wallpapers
+mkdir /usr/share/wallpapers/slide
+wget -c -P -O /usr/share/wallpapers/slide/default.jpg --nocheck-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/wallpapers/AidenDrew%20-%20Glati%20-%201920x1080.jpg
 
 # Load common properties and functions in the current script.
 . ./common.sh
@@ -14,14 +17,17 @@ function has_command() {
 echo"#Set resolution 
 xrandr --size 1024x768 &
 
+# set background color and big wait mouse cursor
+xsetroot -solid '#111111'
+xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
+
 #Set the wallpaper \
+feh --bg-scale /usr/share/wallpapers/slide/AidenDrew%20-%20Glati%20-%201920x1080.jpg
 
 #start tint2 
 tint2 &
 
-# set background color and big wait mouse cursor
-xsetroot -solid '#111111'
-xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
+
 
 " > ~/.config/openbox/autostart
   
