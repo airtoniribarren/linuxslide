@@ -1,6 +1,15 @@
 #!/bin/bash
-# New GRUB file content
-# mv /etc/default/grub /etc/default/grub.bkp
+
+ROOT_UID=0
+
+# check command avalibility
+function has_command() {
+    command -v $1 > /dev/null
+}
+
+# Load common properties and functions in the current script.
+. ./common.sh
+	if [ "$UID" -eq "$ROOT_UID" ]; then
 
 echo '#linuxslide fastboot settings
 GRUB_CMDLINE_LINUX_DEFAULT="splash quiet"
@@ -17,3 +26,8 @@ GRUB_TIMEOUT_STYLE=hidden' > /etc/default/grub
 
 # update GRUB settings
 update-grub
+
+else
+		# Message  
+		echo -e "Please run this script as root..."
+	fi
