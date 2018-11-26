@@ -12,8 +12,12 @@ function has_command() {
 	if [ "$UID" -eq "$ROOT_UID" ]; then
 # make wallpapers folder
 mkdir -p /usr/share/wallpapers/slide
-# dowload the wallpapers
-wget -c -P -O /usr/share/wallpapers/slide/default.jpg --nocheck-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/wallpapers/AidenDrew%20-%20Glati%20-%201920x1080.jpg
+
+# dowload the default wallpapers
+cd /usr/share/wallpapers/slide
+wget --no-check-certificate https://github.com/saymoncoppi/linuxslide/raw/master/custom/wallpapers/wallpapers.zip
+unzip wallpapers.zip
+rm -rf wallpapers.zip
 
 # make folder .config/openbox
 mkdir -p ~/.config/openbox/
@@ -26,7 +30,7 @@ xsetroot -solid '#111111'
 xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
 
 #Set the wallpaper \
-feh --bg-scale /usr/share/wallpapers/slide/default.jpg
+feh --bg-scale /usr/share/wallpapers/slide/Road.png
 
 #start tint2 
 tint2 &
