@@ -111,9 +111,6 @@ deb-src http://ftp.us.debian.org/debian/ stretch-updates main contrib non-free
 deb http://ftp.debian.org/debian stretch-backports main
 " > /etc/apt/sources.list
 
-
-EOF
-
 	else
 		# Message  
 		echo -e "Please run this script as root..."
