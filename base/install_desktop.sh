@@ -11,7 +11,7 @@ function has_command() {
 
 	if [ "$UID" -eq "$ROOT_UID" ]; then
 		clear
-    apt-get install --yes --no-install-recommends openbox compton tint2 feh scrot xterm libnotify4
+    apt-get install --yes --no-install-recommends openbox compton tint2 feh scrot xterm libnotify4 xdotool
 else
 		# Message  
 		echo -e "Please run this script as root..."
