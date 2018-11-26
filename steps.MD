@@ -1,43 +1,13 @@
 # Slide
 A mini Debian flavor with a Simple, Light and Incredible Desktop Enviroment
 
-## Get Debian Tiny Installer
+## Follow these steps
+- Get iso
+- Install sudo
+- Update boot speed
 
-You can download a couple of image files of small size, suitable for USB Sticks and similar devices, write them to the media, and then start the installation by booting from that.
 
-Here are the links to the available image files (look at the MANIFEST file for information): 
-amd64 - http://ftp.nl.debian.org/debian/dists/stretch/main/installer-amd64/current/images/netboot/
 
-## Install SUDO
-apt-get install --no-install-recommends sudo \
-usermod -a -G sudo slide
-
-# GRUB fast boot
-sudo edit /etc/default/grub
-
-#slide fastboot \
-GRUB_CMDLINE_LINUX_DEFAULT="splash quiet" \
-GRUB_DEFAULT=0 \
-GRUB_DISABLE_OS_PROBER=true \
-GRUB_DISTRIBUTOR="`/usr/bin/lsb_release -d -s 2>/dev/null || echo Slide`" \
-GRUB_GFXMODE="1024x768" \
-GRUB_GFXPAYLOAD_LINUX=keep \
-GRUB_HIDDEN_TIMEOUT=0 \
-GRUB_HIDDEN_TIMEOUT_QUIET=true \
-GRUB_RECORDFAIL_TIMEOUT=0 \
-GRUB_TIMEOUT=0 \
-GRUB_TIMEOUT_STYLE=hidden
-
-## update GRUB settings
-sudo update-grub
-
-# reduce TTY number and increase performance
-sudo nano /etc/default/console-setup \
-replace ACTIVE_CONSOLES = "/dev/tty[1-6]" to ACTIVE_CONSOLES = "/dev/tty[1-2]" \
-mv tty3.conf tty3.conf.bkp \
-mv tty4.conf tty4.conf.bkp \
-mv tty5.conf tty5.conf.bkp \
-mv tty6.conf tty6.conf.bkp 
 
 # edit /etc/issue and /etc/motd
 replace withe the content (later)
