@@ -6,16 +6,9 @@ A mini Debian flavor with a Simple, Light and Incredible Desktop Enviroment
 - Install sudo
 - Update boot speed
 - LSB editions
-
-
-
-
-# install Desktop
-## Xorg
-sudo apt-get install --no-install-recommends xserver-xorg-core xserver-xorg-legacy xserver-xorg-video-vesa xserver-xorg-video-vmware xserver-xorg-input-all xinit xfonts-base x11-utils libxcursor1 libdrm-intel1 libgl1-mesa-dri libglu1-mesa x11-xserver-utils alsa-utils pulseaudio
-
-## Desktop
-sudo apt-get install --no-install-recommends openbox compton tint2 feh scrot xterm libnotify4
+- Install X
+- Install Desktop
+- Config the desktop
 
 ## openbox autostart
 edit the file ~/.config/openbox/autostart \
