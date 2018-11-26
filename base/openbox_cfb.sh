@@ -22,7 +22,7 @@ xsetroot -solid '#111111'
 xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
 
 #Set the wallpaper \
-feh --bg-scale /usr/share/wallpapers/slide/AidenDrew%20-%20Glati%20-%201920x1080.jpg
+feh --bg-scale /usr/share/wallpapers/slide/default.jpg
 
 #start tint2 
 tint2 &
