@@ -5,19 +5,10 @@ A mini Debian flavor with a Simple, Light and Incredible Desktop Enviroment
 - Get iso
 - Install sudo
 - Update boot speed
+- LSB editions
 
 
 
-
-# edit /etc/issue and /etc/motd
-replace withe the content (later)
-
-# edit /etc/lsb-release
-replace the content: \
-DISTRIB_ID=Slide \
-DISTRIB_RELEASE="0.1" \
-DISTRIB_DESCRIPTION="Slide 0.1 " \
-DISTRIB_CODENAME=unstable
 
 # install Desktop
 ## Xorg
