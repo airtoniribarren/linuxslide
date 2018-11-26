@@ -97,6 +97,7 @@ path-include /usr/share/locale/en*
 
 #update /etc/apt/sources.list
 echo "
+#add non-free packages
 deb http://ftp.us.debian.org/debian/ stretch main contrib non-free
 deb-src http://ftp.us.debian.org/debian/ stretch main contrib non-free
 
@@ -109,6 +110,9 @@ deb-src http://ftp.us.debian.org/debian/ stretch-updates main contrib non-free
 
 #get unstable software like firefox
 #deb http://http.debian.net/debian unstable main
+
+#https://backports.debian.org/Instructions/
+deb http://ftp.debian.org/debian stretch-backports main
 " > /etc/apt/sources.list
 
 
