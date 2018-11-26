@@ -6,14 +6,18 @@ ROOT_UID=0
 function has_command() {
     command -v $1 > /dev/null
 }
-# dowload the wallpapers
-mkdir -p /usr/share/wallpapers/slide
-wget -c -P -O /usr/share/wallpapers/slide/default.jpg --nocheck-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/wallpapers/AidenDrew%20-%20Glati%20-%201920x1080.jpg
 
 # Load common properties and functions in the current script.
 . ./common.sh
 	if [ "$UID" -eq "$ROOT_UID" ]; then
-  
+# make wallpapers folder
+mkdir -p /usr/share/wallpapers/slide
+# dowload the wallpapers
+wget -c -P -O /usr/share/wallpapers/slide/default.jpg --nocheck-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/wallpapers/AidenDrew%20-%20Glati%20-%201920x1080.jpg
+
+# make folder .config/openbox
+mkdir -p ~/.config/openbox/
+
 echo"#Set resolution 
 xrandr --size 1366x768 &
 
