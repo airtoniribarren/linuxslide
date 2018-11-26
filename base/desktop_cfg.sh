@@ -15,7 +15,7 @@ wget -c -P -O /usr/share/wallpapers/slide/default.jpg --nocheck-certificate http
 	if [ "$UID" -eq "$ROOT_UID" ]; then
   
 echo"#Set resolution 
-xrandr --size 1024x768 &
+xrandr --size 1366x768 &
 
 # set background color and big wait mouse cursor
 xsetroot -solid '#111111'
