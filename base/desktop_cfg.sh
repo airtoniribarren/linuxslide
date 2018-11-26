@@ -22,6 +22,7 @@ clear
 
 # make folder .config/openbox
 mkdir -p ~/.config/openbox/
+cd ~/.config/openbox/
 clear
 
 echo"#Set resolution 
@@ -35,7 +36,7 @@ xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
 feh --bg-scale /usr/share/wallpapers/slide/Road.png
 
 #start tint2 
-tint2 &" > ~/.config/openbox/autostart
+tint2 &" > autostart
 
   else
 		# Message  
