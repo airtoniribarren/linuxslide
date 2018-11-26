@@ -10,11 +10,7 @@ function has_command() {
 # Load common properties and functions in the current script.
 . ./common.sh
 	if [ "$UID" -eq "$ROOT_UID" ]; then
-	
-	#running script inside chroot enviroment (https://askubuntu.com/questions/551195/scripting-chroot-how-to)
-	cat << EOF | chroot $DIR/chroot 
 
-#chroot tail /etc/apt/apt.conf.d/01_custom_slide
 echo 'APT
 {
   NeverAutoRemove
