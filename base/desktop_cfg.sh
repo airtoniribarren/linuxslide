@@ -25,14 +25,14 @@ mkdir -p ~/.config/openbox/
 cd ~/.config/openbox/
 clear
 
-echo"#Set resolution 
+echo "#Set resolution 
 xrandr --size 1366x768 &
 
 # set background color and big wait mouse cursor
 xsetroot -solid '#111111'
 xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
 
-#Set the wallpaper \
+#Set the wallpaper
 feh --bg-scale /usr/share/wallpapers/slide/Road.png
 
 #start tint2 
