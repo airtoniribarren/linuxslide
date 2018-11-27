@@ -23,6 +23,10 @@ clear
 # install white cursor
 apt install dmz-cursor-theme
 
+# get watch-startup cursor
+cd /usr/share/icons
+wget --no-check-certificate https://github.com/saymoncoppi/linuxslide/blob/master/custom/icons/watch-startup
+
 # make folder .config/openbox
 mkdir -p ~/.config/openbox/
 cd ~/.config/openbox/
@@ -33,7 +37,7 @@ xrandr --size 1366x768 &
 
 # set background color and big wait mouse cursor
 xsetroot -solid '#111111'
-xsetroot -xcf /usr/share/icons/DMZ-White/cursors/watch 37
+xsetroot -xcf /usr/share/icons/watch-startup 37
 
 #Set the wallpaper
 feh --bg-scale /usr/share/wallpapers/slide/Road.png
