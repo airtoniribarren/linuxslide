@@ -38,6 +38,19 @@ feh --bg-scale /usr/share/wallpapers/slide/Road.png
 #start tint2 
 tint2 &" > autostart
 
+
+# auto startx
+echo '/lib/systemd/system/xorg.service' > etc/systemd/system/display-manager.service
+
+echo '[Unit]
+Description=X-Window
+ConditionKernelCommandLine=!text
+After=systemd-user-sessions.service
+
+[Service]
+ExecStart=/bin/su --login -c "/usr/bin/startx -- :0 vt7"' > /lib/systemd/system/xorg.service
+
+
   else
 		# Message  
 		echo -e "Please run this script as root..."
