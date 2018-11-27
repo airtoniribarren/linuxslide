@@ -28,13 +28,8 @@ $ sudo update-grub2
 
 
 # or
+fastest kernel
+https://liquorix.net
 
-
-# instal newest kernel
-#wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.2/linux-headers-4.15.2-041502_4.15.2-041502.201802072230_all.deb
-
-#wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.2/linux-headers-4.15.2-041502-generic_4.15.2-041502.201802072230_amd64.deb
-
-#wget kernel.ubuntu.com/~kernel-ppa/mainline/v4.15.2/linux-image-4.15.2-041502-generic_4.15.2-041502.201802072230_amd64.deb
-
-#sudo dpkg -i linux-headers-4.15.2*.deb linux-image-4.15.2*.deb
+enable zswap
+https://www.linuxmint.com.br/discussion/51150/ativando-zswap-lz4
