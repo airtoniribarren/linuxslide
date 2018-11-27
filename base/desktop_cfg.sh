@@ -40,7 +40,7 @@ tint2 &" > autostart
 
 
 # auto startx
-echo '/lib/systemd/system/xorg.service' > etc/systemd/system/display-manager.service
+echo '/lib/systemd/system/xorg.service' > /etc/systemd/system/display-manager.service
 
 echo '[Unit]
 Description=X-Window
