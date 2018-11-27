@@ -20,6 +20,9 @@ unzip wallpapers.zip
 rm -rf wallpapers.zip
 clear
 
+# install white cursor
+apt install dmz-cursor-theme
+
 # make folder .config/openbox
 mkdir -p ~/.config/openbox/
 cd ~/.config/openbox/
@@ -30,7 +33,7 @@ xrandr --size 1366x768 &
 
 # set background color and big wait mouse cursor
 xsetroot -solid '#111111'
-xsetroot -xcf /usr/share/icons/breeze_cursors/cursors/watch 37
+xsetroot -xcf /usr/share/icons/DMZ-White/cursors/watch 37
 
 #Set the wallpaper
 feh --bg-scale /usr/share/wallpapers/slide/Road.png
