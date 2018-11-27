@@ -40,7 +40,6 @@ tint2 &" > autostart
 
 
 # auto startx
-echo '/lib/systemd/system/xorg.service' > /etc/systemd/system/display-manager.service
 
 echo '[Unit]
 Description=X-Window
@@ -48,7 +47,9 @@ ConditionKernelCommandLine=!text
 After=systemd-user-sessions.service
 
 [Service]
-ExecStart=/bin/su --login -c "/usr/bin/startx -- :0 vt7"' > /lib/systemd/system/xorg.service
+ExecStart=/bin/su --login -c "/usr/bin/startx -- :0 vt7"' > /etc/systemd/system/display-manager.service
+systemctl daemon reload
+systemctl enable display-manager
 
 
   else
