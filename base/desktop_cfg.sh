@@ -47,8 +47,11 @@ ConditionKernelCommandLine=!text
 After=systemd-user-sessions.service
 
 [Service]
-ExecStart=/bin/su --login -c "/usr/bin/startx -- :0 vt7"' > /etc/systemd/system/display-manager.service
-systemctl daemon reload
+ExecStart=/bin/su --login -c "/usr/bin/startx -- :0 vt7"
+
+[Install]
+WantedBy=multi-user.target' > /etc/systemd/system/display-manager.service
+systemctl daemon-reload
 systemctl enable display-manager
 
 
