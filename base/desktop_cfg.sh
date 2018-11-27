@@ -39,7 +39,7 @@ xrandr --size 1366x768 &
 xsetroot -solid '#111111'
 xsetroot -xcf /usr/share/icons/watch-startup 37
 
-#Set the wallpaper
+#Set the wallpaper (check later/usr/share/backgrounds/default_background.jpg)
 feh --bg-scale /usr/share/wallpapers/slide/Road.png
 
 #start tint2 
