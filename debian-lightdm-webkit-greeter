@@ -1,3 +1,22 @@
+Browser:
+https://medium.com/@WebReflection/a-minimalistic-64-bit-web-kiosk-for-rpi-3-98e460419b47
+
+# auto startx
+
+echo '[Unit]
+Description=X-Window
+ConditionKernelCommandLine=!text
+After=systemd-user-sessions.service
+[Service]
+ExecStart=/bin/su --login -c "/usr/bin/startx -- :0 vt7"
+[Install]
+WantedBy=multi-user.target' > /etc/systemd/system/display-manager.service
+systemctl daemon-reload
+systemctl enable display-manager
+
+
+
+themas
 https://github.com/berlam/debian-lightdm-webkit-greeter
 https://github.com/artur9010/lightdm-webkit-material
 https://github.com/FallingSnow/lightdm-webkit2-material2
