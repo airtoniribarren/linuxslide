@@ -32,8 +32,16 @@ mkdir -p ~/.config/openbox/
 cd ~/.config/openbox/
 clear
 
+# get xresources
+cd ~/
+wget --no-check-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/.Xresources
+
+#to change resolution
+#https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/fbscreensize
+
 echo "#Set resolution 
-xrandr --size 1366x768 &
+# merge xresource settings
+xrdb -merge ~/.Xresources
 
 # set background color and big wait mouse cursor
 xsetroot -solid '#111111'
