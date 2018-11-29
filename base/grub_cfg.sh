@@ -12,8 +12,9 @@ function has_command() {
 	if [ "$UID" -eq "$ROOT_UID" ]; then
 
 echo '#linuxslide fastboot settings
-GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=1 zswap.compressor=zstd zswap.zpool=z3fold"
-GRUB_CMDLINE_LINUX="console=tty12"
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
+#for the future
+#GRUB_CMDLINE_LINUX_DEFAULT="quiet splash zswap.enabled=1 zswap.compressor=zstd zswap.zpool=z3fold"
 GRUB_DEFAULT=0
 GRUB_DISABLE_OS_PROBER=true
 GRUB_DISTRIBUTOR="`/usr/bin/lsb_release -d -s 2>/dev/null || echo Slide`"
@@ -30,11 +31,9 @@ GRUB_TIMEOUT_STYLE=hidden' > /etc/default/grub
 update-grub
 
 # update modules
-echo zstd >> /etc/initramfs-tools/modules
-echo z3fold >> /etc/initramfs-tools/modules
-
-# update initramfs
-update-initramfs -u
+#echo zstd >> /etc/initramfs-tools/modules
+#echo z3fold >> /etc/initramfs-tools/modules
+#update-initramfs -u
 
 else
 		# Message  
