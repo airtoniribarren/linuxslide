@@ -1,7 +1,7 @@
 #based on https://askubuntu.com/questions/377937/how-to-set-a-custom-resolution
 #edit ~/.xprofile :
 
-RES="1920 1200 60" && \
+RES="1366 768 60" && \
 DISP=$(xrandr | grep -e " connected [^(]" | sed -e "s/\([A-Z0-9]\+\) connected.*/\1/") && \
 MODELINE=$(cvt $(echo $RES) | grep -e "Modeline [^(]" | sed -r 's/.*Modeline (.*)/\1/') && \
 MODERES=$(echo $MODELINE | grep -o -P '(?<=").*(?=")') && \
@@ -11,15 +11,26 @@ xrandr --newmode $MODELINE
 xrandr --addmode $DISP $MODERES
 _EOF
 
-
-RES="1920 1200 60" && DISP=$(xrandr | grep -e " connected [^(]" | sed -e "s/\([A-Z0-9]\+\) connected.*/\1/") && MODELINE=$(cvt $(echo $RES) | grep -e "Modeline [^(]" | sed -r 's/.*Modeline (.*)/\1/') && MODERES=$(echo $MODELINE | grep -o -P '(?<=").*(?=")') && cat > ~/.xprofile << _EOF
-
-#!/bin/sh
-xrandr --newmode $MODELINE
-xrandr --addmode $DISP $MODERES
-_EOF
-
-
 #https://unix.stackexchange.com/questions/227876/how-to-set-custom-resolution-using-xrandr-when-the-resolution-is-not-available-i
 #https://www.linuxquestions.org/questions/linux-software-2/how-to-determine-xrandr-output-name-from-sysfs-output-name-4175614199/
-#http://gs.statcounter.com/screen-resolution-stats/desktop/worldwide
+
+# gen screen resolutions to fluxbox menu
+xrandr 2>/dev/null | fgrep x | fgrep . | sort -n | tr -s " " | cut -d " " -f 2 \
+| sed -r "s:(.*):[exec] (\\1) {fbscreensize \\1}:" > ~/.fluxbox/menu_resolution
+
+
+#!/bin/bash
+
+SIGNAL=~/.fehbg
+rm -f $SIGNAL
+
+OUTPUT=$(xrandr 2>/dev/null | grep 'connected' | cut -d " " -f 1)
+MODE=$1
+
+xrandr --output $OUTPUT --mode $MODE
+
+while [ -e $SIGNAL ]; do
+   sleep 0.1
+done
+
+killall -SIGUSR1 compton
