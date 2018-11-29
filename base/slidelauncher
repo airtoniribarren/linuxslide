@@ -1,0 +1,62 @@
+#!/usr/bin/env gjs
+
+/*! (c) 2018 slide-luncher */
+
+imports.gi.versions.Gtk = '3.0';
+
+(function (Gtk, Gdk, WebKit2) {'use strict';
+
+  
+  Gtk.init(null);
+  const
+    Screen = Gdk.Screen.get_default(),
+    BGCOLOR = param('bgcolor', '255,255,255'),
+    FULLSCREEN = param('fullscreen', false) !== false,
+    MENU = param('menu', false) !== false,
+    WIDTH = +param('width', FULLSCREEN ? Screen.get_width() : 580),
+    HEIGHT = +param('height', FULLSCREEN ? Screen.get_height() : 500),
+    window = new Gtk.Window({
+      type : Gtk.WindowType.TOPLEVEL,
+      decorated: false
+    }),
+    webView = new WebKit2.WebView(),
+    wvSettings = webView.get_settings();;
+
+  const bgColor = (/^\d+,\d+,\d+$/.test(BGCOLOR) ? 'rgb' : 'rgba') + '(' + BGCOLOR + ')';
+  const bg = new Gdk.RGBA();
+  bg.parse(bgColor);
+  webView.set_background_color(bg);
+  window.modify_bg(Gtk.StateType.NORMAL, Gdk.color_parse(bgColor)[1]);
+  window.set_default_size(WIDTH, HEIGHT);
+ 
+   [].concat(
+  ).forEach(function (key) {
+    wvSettings[key] = true;
+  });
+
+  webView.load_uri(url(ARGV.filter(url => '-' !== url[0])[0] || 'google.com'));
+  window.connect('show', () => {
+	
+    if (FULLSCREEN) window.fullscreen();
+    if (MENU) window.set_default_size(WIDTH, HEIGHT), window.move(0,0);
+    Gtk.main();
+  });
+  window.connect('destroy', () => Gtk.main_quit());
+  window.connect('delete_event', () => false);
+  window.add(webView);
+  window.show_all();
+
+  function url(href) {
+    return /^([a-z]{2,}):/.test(href) ? href : ('http://' + href);
+  }
+
+  function param(name, value) {
+    const re = new RegExp('^--' + name + '(=.*)?$', 'i');
+    return ARGV.some(p => re.test(p)) ? RegExp.$1.slice(1) : value;
+  }
+
+}(
+  imports.gi.Gtk,
+  imports.gi.Gdk,
+  imports.gi.WebKit2
+));
