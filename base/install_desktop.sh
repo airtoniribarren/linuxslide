@@ -18,9 +18,9 @@ function has_command() {
     feh \
     scrot \
     xterm \
-    libnotify4 \
     wmctrl \
     xdotool
+#    libnotify4 
 else
 		# Message  
 		echo -e "Please run this script as root..."
