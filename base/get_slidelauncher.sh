@@ -12,7 +12,13 @@ function has_command() {
 . ./common.sh
 	if [ "$UID" -eq "$ROOT_UID" ]; then
 # get the base
-apt-get install --no-install-recommends gjs webkit2gtk gst-plugins-base gst-plugins-good
+apt-get install --no-install-recommends \
+gjs \
+gir1.2-webkit2-4.0 \
+gstreamer1.0-plugins-base \
+gstreamer1.0-plugins-good
+
+#enter /usr/bin folder and copy the new file
 cd /usr/bin
 wget --no-check-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/base/slidelauncher
 chmod a+x slidelauncher
