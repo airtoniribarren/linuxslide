@@ -175,7 +175,7 @@ clear
   xserver-xorg-video-vesa \
   xserver-xorg-video-vmware \
   xserver-xorg-input-all \
-  xinit \ 
+  xinit \
   xfonts-base \
   x11-utils \
   libxcursor1 \
