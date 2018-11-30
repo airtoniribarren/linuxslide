@@ -8,6 +8,9 @@ function has_command() {
 }
 
 # Load common properties and functions in the current script.
+wget --no-check-certificate https://github.com/saymoncoppi/linuxslide/raw/master/base/common.sh
+chmod a+x common.sh
+
 . ./common.sh
 	if [ "$UID" -eq "$ROOT_UID" ]; then
 
@@ -129,10 +132,6 @@ DISTRIB_CODENAME=unstable' >  /etc/lsb-release
 echo "Slide" > /etc/hostname
 
 
-
-
-
-
 # NEW GRUB SETTINGS
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -161,9 +160,6 @@ update-grub
 #update-initramfs -u
 
 
-
-
-
 # NEW X
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 
@@ -188,10 +184,6 @@ clear
   dpkg -x x11-xserver-utils*.deb /tmp/x11utils
   cd /tmp/x11utils
   cp -aR * /
-  
-
-
-
 
 # NEW DESKTOP
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
