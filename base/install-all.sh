@@ -18,9 +18,9 @@ chmod a+x common.sh
 
 
 
-
+sleep 3; clear; echo '
 # NEW APT SETTINGS
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 echo 'APT
 {
   NeverAutoRemove
@@ -108,13 +108,14 @@ deb-src http://ftp.us.debian.org/debian/ stretch-updates main contrib non-free
 #https://backports.debian.org/Instructions/
 deb http://ftp.debian.org/debian stretch-backports main
 " > /etc/apt/sources.list
+apt update
 
 
 
 
-
+sleep 3; clear; echo '
 # NEW FLAVOR
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 # edit /etc/issue
 echo "Linux Slide 0.1" > /etc/issue
@@ -132,8 +133,10 @@ DISTRIB_CODENAME=unstable' >  /etc/lsb-release
 echo "Slide" > /etc/hostname
 
 
+
+sleep 3; clear; echo '
 # NEW GRUB SETTINGS
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 echo '#linuxslide fastboot settings
 GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"
@@ -160,8 +163,10 @@ update-grub
 #update-initramfs -u
 
 
+
+sleep 3; clear; echo '
 # NEW X
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 clear
   apt-get install --no-install-recommends \
@@ -185,8 +190,11 @@ clear
   cd /tmp/x11utils
   cp -aR * /
 
+
+
+sleep 3; clear; echo '
 # NEW DESKTOP
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
   apt-get install --yes --no-install-recommends \
     openbox \
@@ -200,8 +208,10 @@ clear
     #libnotify4 
 
 
+
+sleep 3; clear; echo '
 # NEW DESKTOP SETTINGS
-# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+# +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 # make wallpapers folder
 mkdir -p /usr/share/wallpapers/slide
