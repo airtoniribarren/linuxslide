@@ -169,7 +169,7 @@ sleep 3; clear; echo '
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
 clear
-  apt-get install --no-install-recommends \
+  apt-get install --yes --force-yes --no-install-recommends \
   xserver-xorg-core \
   xserver-xorg-legacy \
   xserver-xorg-video-vesa \
@@ -196,7 +196,7 @@ sleep 3; clear; echo '
 # NEW DESKTOP
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
-  apt-get install --yes --no-install-recommends \
+  apt-get instal --yes --force-yes --no-install-recommends \
     openbox \
     compton \
     tint2 \
@@ -219,7 +219,7 @@ mkdir -p /usr/share/wallpapers/slide
 # dowload the default wallpapers
 cd /usr/share/wallpapers/slide
 wget --no-check-certificate https://github.com/saymoncoppi/linuxslide/raw/master/custom/wallpapers/wallpapers.zip
-apt install unzip
+apt install --yes --force-yes unzip
 unzip wallpapers.zip
 rm -rf wallpapers.zip
 clear
