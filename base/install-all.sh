@@ -132,7 +132,7 @@ DISTRIB_CODENAME=unstable' >  /etc/lsb-release
 # edit /etc/hostname
 echo "Slide" > /etc/hostname
 
-
+echo "Done!"
 
 sleep 3; clear; echo '
 # NEW GRUB SETTINGS
@@ -196,7 +196,7 @@ sleep 3; clear; echo '
 # NEW DESKTOP
 # +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++'
 
-  apt-get instal --yes --force-yes --no-install-recommends \
+  apt-get install --yes --force-yes --no-install-recommends \
     openbox \
     compton \
     tint2 \
@@ -207,7 +207,7 @@ sleep 3; clear; echo '
     xdotool
     #libnotify4 
 
-
+echo 'Done!'
 
 sleep 3; clear; echo '
 # NEW DESKTOP SETTINGS
