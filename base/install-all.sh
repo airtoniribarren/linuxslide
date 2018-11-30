@@ -132,7 +132,7 @@ DISTRIB_CODENAME=unstable' >  /etc/lsb-release
 # edit /etc/hostname
 echo "Slide" > /etc/hostname
 
-echo "Done!"
+echo "done"
 
 sleep 3; clear; echo '
 # NEW GRUB SETTINGS
@@ -207,7 +207,7 @@ sleep 3; clear; echo '
     xdotool
     #libnotify4 
 
-echo 'Done!'
+echo 'done'
 
 sleep 3; clear; echo '
 # NEW DESKTOP SETTINGS
@@ -231,15 +231,16 @@ apt install dmz-cursor-theme
 cd /usr/share/icons
 wget --no-check-certificate https://github.com/saymoncoppi/linuxslide/blob/master/custom/icons/watch-startup
 
-# make folder .config/openbox
-mkdir -p ~/.config/openbox/
-cd ~/.config/openbox/
-clear
-
 # get xresources
 cd ~/
 wget --no-check-certificate https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/.Xresources
 wget --no-check-certificate https://raw.githubusercontent.com/solarized/xresources/master/Xresources.dark
+
+
+# make folder .config/openbox
+mkdir -p ~/.config/openbox/
+cd ~/.config/openbox/
+clear
 
 #to change resolution
 #https://raw.githubusercontent.com/saymoncoppi/linuxslide/master/custom/fbscreensize
@@ -247,11 +248,14 @@ wget --no-check-certificate https://raw.githubusercontent.com/solarized/xresourc
 echo "#Set resolution 
 # merge xresource settings
 xrdb -merge ~/.Xresources
+
 # set background color and big wait mouse cursor
 xsetroot -solid '#111111'
 xsetroot -xcf /usr/share/icons/watch-startup 37
+
 #Set the wallpaper (check later/usr/share/backgrounds/default_background.jpg)
 feh --bg-scale /usr/share/wallpapers/slide/Road.png
+
 #start tint2 
 tint2 &" > autostart
 
