@@ -1,1 +1,14 @@
+config httpd
 https://redmine.lighttpd.net/projects/1/wiki/TutorialConfiguration
+
+firewall riles
+https://www.cyberciti.biz/faq/linux-web-server-firewall-tutorial/
+
+php exec sh
+https://ourcodeworld.com/articles/read/207/how-to-execute-a-shell-command-using-php-without-await-for-the-result-asynchronous-in-linux-and-windows-environments
+
+sudo to exec
+https://serverfault.com/questions/100861/su-to-myself-without-password
+
+exec *.desktop
+https://askubuntu.com/questions/330937/is-it-possible-to-open-an-ubuntu-app-from-html
