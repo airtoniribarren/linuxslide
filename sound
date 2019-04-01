@@ -1,0 +1,20 @@
+https://www.linuxuprising.com/2018/06/system-wide-pulseaudio-effects-software.html
+
+http://www.webupd8.org/2014/10/how-to-add-launchpad-ppas-in-debian-via.html
+
+# https://www.vivaolinux.com.br/dica/Corrigindo-erros-de-chave-publica-no-Debian-(GPG)
+apt-get install debian-keyring 
+
+# pegar a chave do ppa
+https://launchpad.net/~mikhailnov/+archive/ubuntu/pulseeffects
+
+https://keyserver.ubuntu.com/pks/lookup?op=get&search=0xD5B19A73A8ECB754
+
+#https://www.vivaolinux.com.br/topico/Debian-para-iniciantes/Problemas-com-distribuicao-baseada-no-Debian
+gpg --keyserver keyserver.ubuntu.com --recv-keys 0xD5B19A73A8ECB754
+gpg --armor --export 0xD5B19A73A8ECB754 | apt-key add - 
+
+sudo add-apt-repository --remove ppa:PPA_Name/ppa
+
+
+
